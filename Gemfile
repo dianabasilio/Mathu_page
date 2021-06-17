@@ -20,6 +20,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
+gem 'jquery-rails'
+
 
 gem 'faker', '~> 2.17'
 

@@ -2,19 +2,89 @@
 <html>
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>UnivApp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Mathu Asesorías</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style>    
+  nav ul li a{
+    color: white;
+      }    
+  </style>
+
   </head>
 
   <body>
-    <%= link_to 'Página inicial', root_path %>
-    <%= link_to 'Acerca de nosotros', about_path %>
-    <%= link_to 'Curso Nuevo', courses_new_path %>
-    <%= yield %>
+    <header>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+
+      <nav class="#039be5 light-blue darken-1">
+        <div class= "container">
+          <div class="nav-wrapper ">
+            <a href="#" class="brand-logo right black-text">Mathu</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de nosotros</a></li>
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Cuenta<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de nosotros</a></li>
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Cuenta<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <main>
+      <div class = "container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="page-footer #039be5 light-blue darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Mathu asesorías</h5>
+            <p class="grey-text text-lighten-4">"No solo te ayudamos a entender tus tareas, creamos un futuro exitoso para ti sin miedo a las matemáticas." </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Info</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contacto</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 Mathu.asesorias.org
+        <a class="grey-text text-lighten-4 right" href="#!"> Cambia tu futuro</a>
+        </div>
+      </div>
+    </footer>          
   </body>
 </html>
