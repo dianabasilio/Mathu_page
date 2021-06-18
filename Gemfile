@@ -23,7 +23,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'jquery-rails'
-
+gem 'jquery-turbolinks'
 
 gem 'faker', '~> 2.17'
 
