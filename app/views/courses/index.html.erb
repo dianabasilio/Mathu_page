@@ -5,42 +5,30 @@
 </div>
 
 <div class = "row">
-	<div class= "col s12">
-		<div class="card">
-		<div class="card-image waves-effect waves-block waves-light">
-		  <img class="activator" src="https://github.com/dianabasilio/markdown/blob/main/images/mathu.image.2.jpg?raw=true"  width="200" height="200">
+	<% Course.all.each do |course| %>
+		<div class= "col s12">
+			<div class="card">
+			<div class="card-image waves-effect waves-block waves-light">
+			  <img class="activator" src= "<%=course.image %>" width="200" height="200">
+			</div>
+			<div class="card-content">
+			  <span class="card-title activator grey-text text-darken-4"> <%= course.short_name %>: <%= course.name %> <i class="material-icons right">more_vert</i></span>
+			  <p><a href="#">Inscribirme al curso</a></p>
+			  <p><a href="#">Info</a></p>
+			</div>
+			<div class="card-reveal">
+			  <span class="card-title grey-text text-darken-4"> <%= course.short_name %>: <%= course.name %><i class="material-icons right">close</i></span>
+			  <p><%= course.description %> </p>
+			</div>
+			</div>
 		</div>
-		<div class="card-content">
-		  <span class="card-title activator grey-text text-darken-4"> C1: Despeje de variables<i class="material-icons right">more_vert</i></span>
-		  <p><a href="#">Inscribirme al curso</a></p>
-		  <p><a href="#">Info</a></p>
-		</div>
-		<div class="card-reveal">
-		  <span class="card-title grey-text text-darken-4">Despeje de variables<i class="material-icons right">close</i></span>
-		  <p>Descripción: En este curso entederás cómo despejar variables, de principiante a experto. </p>
-		</div>
-		</div>
-	</div>
+		<pre class="tab"></pre>
+
+	<% end %>
+
 </div>
 
-<div class = "row">
-	<div class= "col s12">
-	<div class="card">
-	<div class="card-image waves-effect waves-block waves-light">
-	  <img class="activator" src="https://github.com/dianabasilio/markdown/blob/main/images/mathu.image5.jpg?raw=true"  width="200" height="200">
-	</div>
-	<div class="card-content">
-	  <span class="card-title activator grey-text text-darken-4">C2: Cálculo integral y derivativo<i class="material-icons right">more_vert</i></span>
-	  <p><a href="#">Inscribirme al curso</a></p>
-	  <p><a href="#">Info</a></p>
-	</div>
-	<div class="card-reveal">
-	  <span class="card-title grey-text text-darken-4">Despeje de variables<i class="material-icons right">close</i></span>
-	  <p>Descripción: Aprenderás desde 0 a resolver integrales y derivadas. </p>
-	</div>
-	</div>
-	</div>
-</div>
+
 
 
 

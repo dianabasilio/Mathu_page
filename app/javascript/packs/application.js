@@ -19,13 +19,15 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-$(document).ready( function(){
+$(document).ready(function(){
+	$('.sidenav').sidenav();// Initialize collapse button
 
 	$(".dropdown-trigger").dropdown();
 	$('select').formSelect();
-	$('.sidenav').sidenav();// Initialize collapse button
+
 	$('.button-collapse').sideNav(
 	{
 		closeOnClick: true
 	})
 })
+
