@@ -3,12 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
-//= require rails-ujs
-//= require materialize
 //= require turboolinks
-//= require_tree
+//= require materialize
+//= require bootstrap-sprockets
+//= require_tree .
+
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -19,15 +19,4 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-$(document).ready(function(){
-	$('.sidenav').sidenav();// Initialize collapse button
-
-	$(".dropdown-trigger").dropdown();
-	$('select').formSelect();
-
-	$('.button-collapse').sideNav(
-	{
-		closeOnClick: true
-	})
-})
 
