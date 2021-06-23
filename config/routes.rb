@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'courses#index'
   get 'new', to: 'courses#new'
   get 'about', to: 'pages#about'
+  get 'contacto', to: 'pages#contacto'
   get 'lists', to: 'courses#lists'
   get 'infoC1', to: 'courses#infoC1'
   resources :students, except: [:destroy]
